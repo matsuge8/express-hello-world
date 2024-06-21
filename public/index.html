@@ -63,10 +63,10 @@
           const { id, text } = JSON.parse(msg.data)
           const messageList = document.querySelector('.messages')
           const li = document.createElement('li')
-          if (res.id === myId) {
-            li.textContent = `(${res.id})自分:` + res.text;
+          if (id === myId) {
+            li.textContent = `(${id})自分:` + text;
           } else {
-            li.textContent = res.id + ': ' + res.text;
+            li.textContent = id + ': ' + text;
           }
           messageList.appendChild(li)
         }
